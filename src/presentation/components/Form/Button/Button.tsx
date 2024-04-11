@@ -1,8 +1,12 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-import * as S from './Button-styles';
+import * as S from "./Button-styles";
 
-export type ButtonVariants = 'primary' | 'secondary';
+export type ButtonVariants =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "quartinary";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariants;
@@ -11,8 +15,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = ({
-  type = 'button',
-  variant = 'primary',
+  type = "button",
+  variant = "primary",
   isVisible = true,
   children,
   ...rest

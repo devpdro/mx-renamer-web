@@ -7,7 +7,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 
 const moveUp = keyframes`
   to {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
   from {
      transform: translateY(0px);
@@ -19,7 +19,7 @@ const moveUpReverse = keyframes`
     transform: translateY(0px);
   }
   from {
-     transform: translateY(-3px);
+     transform: translateY(-2px);
   }
 `;
 

@@ -28,6 +28,32 @@ const variants = {
       background-color: ${({ theme }) => theme.colors.hoverButtonWhite};
     }
   `,
+  tertiary: css`
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.blue};
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+    border: ${({ theme }) => theme.colors.borderBlack};
+    padding: 0.6rem 1.2rem;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.hoverButtonBlue};
+    }
+  `,
+  quartinary: css`
+    color: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+    border: ${({ theme }) => theme.colors.borderBlack};
+    padding: 0.6rem 1.2rem;
+    margin: 0 1rem;
+
+    &:hover {
+      border: ${({ theme }) => theme.colors.hoverButtonWhite};
+      background-color: ${({ theme }) => theme.colors.hoverButtonWhite};
+    }
+  `,
 };
 
 export const Container = styled.button<ButtonProps>`
