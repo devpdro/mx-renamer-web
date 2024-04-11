@@ -6,7 +6,7 @@ import * as S from "./file-manager-styles";
 
 const FilesManager = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const files = useSelector((state: any) => state); // Corrija o tipo de 'state' conforme a estrutura da sua store
+  const files = useSelector((state: any) => state);
 
   const handleSaveFile = (fileName: string) => {
     try {
@@ -21,9 +21,30 @@ const FilesManager = () => {
   return (
     <S.Container>
       <S.TableContainer>
-        <Table caption="#" data={files.newName} width="11%" />
-        <Table caption="Nome do arquivo original" data={files.name} width="37%" />
-        <Table caption="Novo nome do arquivo" data={files.name} width="37%" />
+        <Table
+          caption="#"
+          data={files.id.map((id: string, index: number) => ({
+            id: id.toString(),
+            index,
+          }))}
+          width="11%"
+        />
+        <Table
+          caption="Nome do arquivo original"
+          data={files.name.map((name: string, index: number) => ({
+            name,
+            index,
+          }))}
+          width="37%"
+        />
+        <Table
+          caption="Novo nome do arquivo"
+          data={files.newName.map((newName: string, index: number) => ({
+            newName,
+            index,
+          }))}
+          width="37%"
+        />
         <Table
           caption="Baixar um por um"
           data={files.name.map((fileName: string) => (

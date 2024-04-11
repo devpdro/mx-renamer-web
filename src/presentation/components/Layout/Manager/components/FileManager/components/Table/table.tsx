@@ -8,11 +8,16 @@ const Table: React.FC<TableInformationProps> = ({ caption, data, width }) => {
       <caption>{caption}</caption>
       <tbody>
         {Array.isArray(data) &&
-          data.map((item: string, index: number) => (
-            <tr key={index}>
-              <th>{item}</th>
-            </tr>
-          ))}
+          data.map(
+            (
+              { id, name, index } 
+            ) => (
+              <tr key={index}>
+                <th>{id}</th>
+                <th>{name}</th> 
+              </tr>
+            )
+          )}
       </tbody>
     </S.TableId>
   );
