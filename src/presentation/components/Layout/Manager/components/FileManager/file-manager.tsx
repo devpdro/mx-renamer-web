@@ -4,7 +4,7 @@ import { Table } from "./components";
 
 import * as S from "./file-manager-styles";
 
-const FilesManager = () => {
+const FileManager = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const files = useSelector((state: any) => state);
 
@@ -27,7 +27,7 @@ const FilesManager = () => {
             id: id.toString(),
             index,
           }))}
-          width="11%"
+          width="10%"
         />
         <Table
           caption="Nome do arquivo original"
@@ -35,7 +35,7 @@ const FilesManager = () => {
             name,
             index,
           }))}
-          width="37%"
+          width="35%"
         />
         <Table
           caption="Novo nome do arquivo"
@@ -43,20 +43,20 @@ const FilesManager = () => {
             newName,
             index,
           }))}
-          width="37%"
+          width="35%"
         />
         <Table
-          caption="Baixar um por um"
+          caption="Operação"
           data={files.name.map((fileName: string) => (
             <button key={fileName} onClick={() => handleSaveFile(fileName)}>
               Baixar
             </button>
           ))}
-          width="15%"
+          width="20%"
         />
       </S.TableContainer>
     </S.Container>
   );
 };
 
-export default FilesManager;
+export default FileManager;

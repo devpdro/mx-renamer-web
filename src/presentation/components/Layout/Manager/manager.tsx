@@ -1,5 +1,9 @@
-import { UploudFile, RuleManager } from "./components";
-import FilesManager from "./components/FileManager/file-manager";
+import {
+  DownloadPanel,
+  FileManager,
+  UploudFile,
+  RuleManager,
+} from "./components";
 
 import * as S from "./manager-styles";
 
@@ -8,7 +12,8 @@ const Manager = () => {
     <S.Container>
       <UploudFile />
       <RuleManager />
-      <FilesManager />
+      <FileManager />
+      <DownloadPanel />
     </S.Container>
   );
 };

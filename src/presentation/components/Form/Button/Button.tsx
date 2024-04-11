@@ -6,7 +6,8 @@ export type ButtonVariants =
   | "primary"
   | "secondary"
   | "tertiary"
-  | "quartinary";
+  | "quartinary"
+  | "quintary";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariants;

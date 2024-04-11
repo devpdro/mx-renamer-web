@@ -11,7 +11,7 @@ export const Container = styled.section`
 `;
 
 export const BoxContainer = styled.div`
-  padding: 1rem 2rem;
+  padding: 4rem 2rem;
 `;
 
 export const IconBox = styled.div`

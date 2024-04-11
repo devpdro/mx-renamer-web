@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  height: 200px;
+  height: 400px;
   width: 100%;
   overflow-x: auto;
   table {
-    border: 1px solid #e1e1e6;
+    border-right: ${({ theme }) => theme.colors.borderBlack};
+    border-left: ${({ theme }) => theme.colors.borderBlack};
+    border-bottom: ${({ theme }) => theme.colors.borderBlack};
   }
 `;
 

@@ -1,11 +1,18 @@
+interface InstallFilesAction {
+  type: "INSTALL_FILES";
+  payload: File;
+}
+
+type FileAction = AddFilesAction | InstallFilesAction;
+
 // Definição de tipos para o estado inicial e a ação
-interface FileState {
+export interface FileState {
   idCounter: number;
   id: string[];
   file: never[];
   name: string[];
   newName: never[];
-  install: never[];
+  install: string[];
 }
 
 interface AddFilesAction {
@@ -13,10 +20,8 @@ interface AddFilesAction {
   payload: string[];
 }
 
-type FileAction = AddFilesAction;
-
 // Estado inicial
-const initialState: FileState = {
+export const initialState: FileState = {
   idCounter: 1,
   id: [],
   file: [],
@@ -37,11 +42,23 @@ const fileReducer = (
         state.idCounter++;
         return newId;
       });
+
+      // Atualiza o estado com os novos IDs e nomes de arquivos
+      console.log("Nomes dos arquivos adicionados:", action.payload);
       return {
         ...state,
-        idCounter: state.idCounter, // Mantém o contador de ID
+        idCounter: state.idCounter,
         id: [...state.id, ...newIds],
-        name: [...state.name, ...action.payload],
+        name: [...state.name, ...action.payload], // Adiciona todos os novos nomes
+      };
+    }
+    case "INSTALL_FILES": {
+      // Aqui você pode adicionar a lógica para instalar os arquivos
+      // Por exemplo, definir o estado de instalação como concluído
+      console.log("Arquivos instalados:", action.payload);
+      return {
+        ...state,
+        install: ["completed"], // Defina como concluído após a instalação
       };
     }
     // Outros casos de reducer para outras ações

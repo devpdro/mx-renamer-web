@@ -1,11 +1,11 @@
-import React from "react";
+import * as S from "./wrapper-styles";
 
 interface WrapperProps {
   content: React.ReactNode;
 }
 
 const Wrapper: React.FC<WrapperProps> = ({ content }) => {
-  return <section>{content}</section>;
+  return <S.Container>{content}</S.Container>;
 };
 
 export default Wrapper;

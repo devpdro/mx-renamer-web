@@ -10,6 +10,7 @@ export const FileActions = () => {
   const updateFiles = (newFiles: string[]) => {
     setFiles((prevFiles) => [...prevFiles, ...newFiles]);
     dispatch(addFiles(newFiles));
+    
   };
 
   const handleDrop = async (event: React.DragEvent<HTMLDivElement>) => {
@@ -33,7 +34,7 @@ export const FileActions = () => {
 
       if (selectionType === "file") {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const fileHandles = await (window as any).showOpenFilePicker({
+        const fileHandles = await(window as any).showOpenFilePicker({
           multiple: true,
         });
         names = await Promise.all(
@@ -45,7 +46,7 @@ export const FileActions = () => {
         );
       } else if (selectionType === "folder") {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const directoryHandle = await (window as any).showDirectoryPicker();
+        const directoryHandle = await(window as any).showDirectoryPicker();
         const entries = await directoryHandle.values();
         for await (const entry of entries) {
           names.push(entry.name);
@@ -55,7 +56,7 @@ export const FileActions = () => {
       updateFiles(names);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err) {
-      // Catch vazio para lidar com o erro silenciosamente
+      //
     }
   };
 

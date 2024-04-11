@@ -3,6 +3,7 @@ export default {
   colors: {
     black: "#1c1c1c",
     white: "#e1e1e6",
+    whiteSecondary: "#fff",
     blue: "#3255eb",
     lightGreen: "#38e492",
     mediumGreen: "#004d00",
@@ -16,7 +17,7 @@ export default {
     hoverButtonBlue: "#3D61FF",
     hoverButtonGreen: "1px solid rgba(0, 77, 0, 0.5);",
     borderGreen: "1px solid rgba(0, 77, 0, 0.1);",
-    borderBlack: "1px solid rgba(28, 28, 28, 0.2);",
+    borderBlack: "1px solid rgba(28, 28, 28, 0.1);",
     hoverButtonWhite: "1px solid rgba(28, 28, 28, 0.8);",
   },
   fontSizes: {
@@ -38,7 +39,7 @@ export default {
     bold: "600",
     medium: "500",
     default: "450",
-    light: "300",
+    light: "400",
   },
   iconSizes: {
     default: "1rem",

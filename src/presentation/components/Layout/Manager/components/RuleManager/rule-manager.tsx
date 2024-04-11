@@ -2,7 +2,7 @@ import { useState, ReactNode } from "react";
 
 import { FileExtension, Ordering, Wrapper } from "./components";
 
-import * as S from './rule-manager'
+import * as S from "./rule-manager";
 
 const RuleManager = () => {
   const [content, setContent] = useState<ReactNode | null>(null); // Definindo o tipo inicial como ReactNode ou null
@@ -23,19 +23,27 @@ const RuleManager = () => {
     );
   };
 
-    const handleButtonClickOrdem = () => {
-      setContent(
-        <>
-          ordering
-        </>
-      );
-    };
+  const handleButtonClickOrdem = () => {
+    setContent(<>ordering</>);
+  };
   return (
-    <S.Container>
-      <FileExtension onButtonClick={handleButtonClick} />
-      <Ordering onButtonClick={handleButtonClickOrdem} />
+    <>
+      <S.Container>
+        <FileExtension onButtonClick={handleButtonClick} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <FileExtension onButtonClick={handleButtonClick} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />
+        <Ordering onButtonClick={handleButtonClickOrdem} />{" "}
+        <FileExtension onButtonClick={handleButtonClick} />
+      </S.Container>
       <Wrapper content={content}></Wrapper>
-    </S.Container>
+    </>
   );
 };
 

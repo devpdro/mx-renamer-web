@@ -1,4 +1,4 @@
-import { Button } from "../../../../../../Form";
+import { TextRules } from "../../../../../../Form";
 
 interface FileExtensionProps {
   onButtonClick: () => void;
@@ -7,9 +7,9 @@ interface FileExtensionProps {
 const FileExtension: React.FC<FileExtensionProps> = ({ onButtonClick }) => {
   return (
     <div>
-      <Button variant="tertiary" onClick={onButtonClick}>
+      <TextRules variant="primary" onClick={onButtonClick}>
         Entesão de arquivo
-      </Button>
+      </TextRules>
     </div>
   );
 };
