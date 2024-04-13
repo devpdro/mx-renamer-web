@@ -5,9 +5,9 @@ import * as S from './download-panel-styles'
 const DownloadPanel = () => {
   return (
     <S.Container>
-      <div>
+      <S.BoxStatistics>
         <FileStatistics />
-      </div>
+      </S.BoxStatistics>
       <S.Buttons>
         <ClearList />
         <RestoreName />

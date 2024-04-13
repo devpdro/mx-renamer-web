@@ -14,10 +14,10 @@ const FileStatistics = () => {
   );
 
   return (
-    <div>
+    <>
       <p>Total de arquivos: {totalFiles}</p>
       <p>Tamanho total: {totalSize} bytes</p>
-    </div>
+    </>
   );
 };
 

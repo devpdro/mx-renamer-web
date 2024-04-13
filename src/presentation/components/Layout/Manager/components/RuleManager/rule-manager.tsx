@@ -31,16 +31,6 @@ const RuleManager = () => {
       <S.Container>
         <FileExtension onButtonClick={handleButtonClick} />
         <Ordering onButtonClick={handleButtonClickOrdem} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />
-        <FileExtension onButtonClick={handleButtonClick} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />
-        <Ordering onButtonClick={handleButtonClickOrdem} />{" "}
-        <FileExtension onButtonClick={handleButtonClick} />
       </S.Container>
       <Wrapper content={content}></Wrapper>
     </>

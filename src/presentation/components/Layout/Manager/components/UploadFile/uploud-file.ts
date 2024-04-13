@@ -3,23 +3,23 @@ import styled from "styled-components";
 import { LiaCloudUploadAltSolid } from "react-icons/lia";
 
 export const Container = styled.section`
+  border: 2px dashed rgba(28, 28, 28, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  border: 2px dashed rgba(28, 28, 28, 0.3);
 `;
 
 export const BoxContainer = styled.div`
-  padding: 4rem 2rem;
+  padding: 3.5rem 2rem;
 `;
 
 export const IconBox = styled.div`
+  color: ${({ theme }) => theme.colors.blue};
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 1rem;
-  color: ${({ theme }) => theme.colors.blue};
 `;
 
 export const Icon = styled(LiaCloudUploadAltSolid)`
@@ -33,8 +33,13 @@ export const ButtonBox = styled.div`
 `;
 
 export const TextBox = styled.div`
-  padding: 2rem 0rem;
+  padding: 2rem 0rem 2rem 0;
+  margin-top: 0.5rem;
   p {
-    font-size: 1.1rem;
+    font-size: ${({ theme }) => theme.fontSizes.default};
+    @media (max-width: 820px) {
+      font-size: 1.05rem;
+      text-align: center;
+    }
   }
 `;

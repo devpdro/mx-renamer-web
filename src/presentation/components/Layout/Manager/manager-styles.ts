@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  border: 1px solid rgba(28, 28, 28, 0.2);
   max-width: 1280px;
-  margin: 0 auto;
-  margin-top: 4rem;
+  margin: 3rem auto 12rem auto;
   padding: 2rem;
   border-radius: 15px;
-  margin-bottom: 12rem;
+  @media (max-width: 820px) {
+    margin: 2rem auto 12rem auto;
+  }
 `;

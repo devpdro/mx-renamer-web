@@ -1,17 +1,19 @@
 import styled, { css } from "styled-components";
 
-import { ButtonProps } from "./Button";
+import { ButtonProps } from "./button";
 
 const variants = {
   primary: css`
-    color: ${({ theme }) => theme.colors.white};
-    background: ${({ theme }) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.blue};
+    background: ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.blue};
     font-size: ${({ theme }) => theme.fontSizes.default};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
-    padding: 1rem 1.8rem;
+    padding: 0.6rem 1.4rem;
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.hoverButtonBlue};
+      color: ${({ theme }) => theme.colors.white};
     }
   `,
   secondary: css`
@@ -20,7 +22,7 @@ const variants = {
     font-size: ${({ theme }) => theme.fontSizes.default};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     border: ${({ theme }) => theme.colors.borderBlack};
-    padding: 1rem 1.8rem;
+    padding: 0.6rem 1.4rem;
     margin: 0 0 0 1rem;
 
     &:hover {
@@ -31,11 +33,13 @@ const variants = {
   tertiary: css`
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.blue};
-    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-size: ${({ theme }) => theme.fontSizes.default};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     border: ${({ theme }) => theme.colors.borderBlack};
-    padding: 0.6rem 1.2rem;
-
+    padding: 0.6rem 1.4rem;
+    @media (max-width: 820px) {
+      padding: 0.6rem 0.8rem;
+    }
     &:hover {
       background-color: ${({ theme }) => theme.colors.hoverButtonBlue};
     }
@@ -43,12 +47,31 @@ const variants = {
   quartinary: css`
     color: ${({ theme }) => theme.colors.black};
     background: ${({ theme }) => theme.colors.white};
-    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-size: ${({ theme }) => theme.fontSizes.default};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     border: ${({ theme }) => theme.colors.borderBlack};
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1.4rem;
     margin: 0 1rem;
+    @media (max-width: 820px) {
+      padding: 0.6rem 0.8rem;
+    }
+    &:hover {
+      border: ${({ theme }) => theme.colors.hoverButtonWhite};
+      background-color: ${({ theme }) => theme.colors.hoverButtonWhite};
+    }
+  `,
 
+  quintary: css`
+    color: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSizes.default};
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+    border: ${({ theme }) => theme.colors.borderBlack};
+    padding: 0.6rem 1.4rem;
+    margin: 0 1rem 0 0;
+    @media (max-width: 820px) {
+      padding: 0.6rem 0.8rem;
+    }
     &:hover {
       border: ${({ theme }) => theme.colors.hoverButtonWhite};
       background-color: ${({ theme }) => theme.colors.hoverButtonWhite};

@@ -46,7 +46,15 @@ export const Container = styled.header`
   flex-direction: column;
   text-align: center;
   max-width: 780px;
-  margin: 4rem auto 0 auto;
+  margin: 4.4rem auto 0 auto;
+  @media (min-width: 651px) and (max-width: 1080px) {
+    margin: 3.4rem auto 0 auto;
+  }
+  @media (max-width: 650px) {
+    align-items: flex-start;
+    padding: 0 1.7rem;
+    margin: 2rem auto 0 auto;
+  }
 `;
 
 export const Version = styled.div`
@@ -56,11 +64,21 @@ export const Version = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 0.4rem 0.7rem;
   margin-bottom: 1.7rem;
   border-radius: 5px;
   transition: all 0.3s ease;
+
+  @media (min-width: 651px) and (max-width: 702px) {
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    margin-bottom: 0rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    margin-bottom: 0rem;
+  }
+
   &:hover {
     border: ${({ theme }) => theme.colors.hoverButtonGreen};
     animation: ${moveUp} 0.3s forwards;
@@ -95,11 +113,19 @@ export const Information = styled.div`
 
   p {
     color: ${({ theme }) => theme.colors.darkGray};
-    font-size: ${({ theme }) => theme.fontSizes.default};
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.08rem;
     padding: 0 1.4rem;
+
+    @media (min-width: 701px) and (max-width: 1080px) {
+      font-size: ${({ theme }) => theme.fontSizes.default};
+    }
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 `;
 
@@ -124,13 +150,29 @@ export const IconFire = styled(FaFire)`
 export const TitleBox = styled.div`
   h1 {
     font-size: ${({ theme }) => theme.fontSizes.extraLarge};
-    line-height: 3.4rem;
+    line-height: 3.2rem;
     margin-bottom: 2rem;
+    @media (max-width: 650px) {
+      text-align: left;
+      padding: 0 1rem 0 0;
+      font-size: 2rem;
+      line-height: 2.1rem;
+      margin-bottom: 1.5rem;
+    }
   }
   p {
     font-size: ${({ theme }) => theme.fontSizes.mediumlarge};
     color: ${({ theme }) => theme.colors.mediumGray};
     margin-bottom: 3rem;
+    padding: 0 1rem;
+    text-overflow: clip;
+    @media (max-width: 650px) {
+      font-size: 1.05rem;
+      padding: 0 2rem 0 0;
+      line-height: 1.8rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
   }
 `;
 

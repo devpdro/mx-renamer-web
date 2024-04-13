@@ -1,4 +1,4 @@
-import { TextRules } from "../../../../../../Form";
+import { Rules } from "../../../../../../Form";
 
 interface OrderingProps {
   onButtonClick: () => void;
@@ -7,9 +7,9 @@ interface OrderingProps {
 const Ordering: React.FC<OrderingProps> = ({ onButtonClick }) => {
   return (
     <div>
-      <TextRules variant="primary" onClick={onButtonClick}>
+      <Rules onClick={onButtonClick}>
         Ordem
-      </TextRules>
+      </Rules>
     </div>
   );
 };

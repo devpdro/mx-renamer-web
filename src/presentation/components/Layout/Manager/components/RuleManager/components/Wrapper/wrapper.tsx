@@ -1,5 +1,4 @@
 import * as S from "./wrapper-styles";
-
 interface WrapperProps {
   content: React.ReactNode;
 }

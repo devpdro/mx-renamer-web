@@ -1,10 +1,11 @@
-import { FileActions } from "../../../../../../utils/";
+import { HandleDrop, FileActions } from "../../../../../../utils";
 import { Button } from "../../../../Form";
 
 import * as S from "./uploud-file";
 
 const UploudFile = () => {
-  const { handleDrop, handleButtonFile, handleButtonFolder } = FileActions();
+  const { handleButtonFile, handleButtonFolder } = FileActions();
+  const { handleDrop } = HandleDrop();
 
   return (
     <S.Container onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>

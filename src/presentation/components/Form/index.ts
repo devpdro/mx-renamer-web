@@ -1,2 +1,2 @@
-export { default as Button } from './Button/Button'
-export { default as TextRules } from "./TextRules/text-rules";
+export { default as Button } from "./Button/button";
+export { default as Rules } from "./Rules/rules";

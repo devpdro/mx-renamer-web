@@ -1,28 +1,28 @@
 import { ReactNode } from "react"; // Importa o React e ReactNode
-import * as S from "./text-rules.styles";
+import * as S from "./rules-styles";
 
-export type TextVariants = "primary" | "secondary";
+export type RulesVariants = "primary";
 
 interface PAttributes {
   className?: string;
   onClick?: () => void;
 }
 
-export interface TextRulesProps extends PAttributes {
-  variant?: TextVariants;
+export interface RulesProps extends PAttributes {
+  variant?: RulesVariants;
   isVisible?: boolean;
   children: ReactNode;
 }
 
-const TextRules = ({
+const Rules = ({
   variant = "primary",
   isVisible = true,
   children,
   ...rest
-}: TextRulesProps) => (
+}: RulesProps) => (
   <S.Container as="p" variant={variant} isVisible={isVisible} {...rest}>
     {children}
   </S.Container>
 );
 
-export default TextRules;
+export default Rules;

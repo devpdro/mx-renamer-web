@@ -21,10 +21,10 @@ export default {
     hoverButtonWhite: "1px solid rgba(28, 28, 28, 0.8);",
   },
   fontSizes: {
-    extraLarge: "4rem",
+    extraLarge: "3.2rem",
     largeMedium: "1.7rem",
     large: "1.5rem",
-    mediumlarge: "1.3rem",
+    mediumlarge: "1.2rem",
     medium: "1.2rem",
     default: "1.1rem",
     small: "1rem",

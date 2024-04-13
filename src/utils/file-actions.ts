@@ -7,25 +7,19 @@ export const FileActions = () => {
   const [, setFiles] = useState<string[]>([]);
   const dispatch = useDispatch();
 
-  const updateFiles = (newFiles: string[]) => {
-    setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-    dispatch(addFiles(newFiles));
-    
-  };
-
-  const handleDrop = async (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const newFiles: File[] = Array.from(event.dataTransfer.files);
-    const newFileNames = newFiles.map((file) => file.name);
-    updateFiles(newFileNames);
-  };
-
+  
   const handleButtonFile = async () => {
     await handleSelection("file");
   };
 
   const handleButtonFolder = async () => {
     await handleSelection("folder");
+  };
+
+  const updateFiles = (newFiles: string[]) => {
+    setFiles((prevFiles) => [...prevFiles, ...newFiles]);
+    dispatch(addFiles(newFiles));
+    
   };
 
   const handleSelection = async (selectionType: "file" | "folder") => {
@@ -60,5 +54,5 @@ export const FileActions = () => {
     }
   };
 
-  return { handleDrop, handleButtonFile, handleButtonFolder };
+  return { handleButtonFile, handleButtonFolder };
 };

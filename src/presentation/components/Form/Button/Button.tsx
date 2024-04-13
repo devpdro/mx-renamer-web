@@ -1,13 +1,13 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-import * as S from "./Button-styles";
+import * as S from "./button-styles";
 
 export type ButtonVariants =
   | "primary"
   | "secondary"
   | "tertiary"
   | "quartinary"
-  | "quintary";
+  | "quintary"
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariants;

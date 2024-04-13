@@ -1,43 +1,88 @@
 import styled from "styled-components";
 
+import { IoIosMenu } from "react-icons/io";
+
+interface NavBoxProps {
+  active?: boolean;
+}
+
+interface LinkProps {
+  activeClassName?: string;
+}
+
 export const Container = styled.nav`
-  font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-weight: ${({ theme }) => theme.fontWeight.default};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.hoverButtonBlue};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3.5rem;
-`;
-
-export const NavBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 1.5rem 3rem;
+  
+  @media (max-width: 1080px) {
+    display: block;
+    padding: 1.5rem 1.5rem;
+  }
 `;
 
 export const TitleBox = styled.div`
-  padding: 0 1rem 0 0;
-  h1 {
-    color: ${({ theme }) => theme.colors.black};
-    font-family: ${({ theme }) => theme.fontSizes.large};
-    font-weight: ${({ theme }) => theme.fontWeight.medium};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const Logo = styled.h1`
+  font-size: ${({ theme }) => theme.fontSizes.large};
+  @media (max-width: 1080px) {
+    margin: 0.7rem 0;
   }
 `;
-export const LinksBox = styled.div`
-  color: ${({ theme }) => theme.colors.white};
-  background-color: ${({ theme }) => theme.colors.blue};
-  border-radius: 35px;
-  padding: 1rem 1.5rem;
-  margin: 0 4rem;
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    padding: 0 0.5rem;
-    li {
-      font-size: ${({ theme }) => theme.fontSizes.default};
-      padding: 0 1rem;
-    }
+
+export const Icon = styled(IoIosMenu)`
+  font-size: 2.2rem;
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 1080px) {
+    display: block;
+  }
+  @media (min-width: 1081px) {
+    display: none;
+  }
+`;
+
+export const Navbox = styled.div<NavBoxProps>`
+  @media (max-width: 1080px) {
+    display: ${(props) => (props.active ? "block" : "none")};
+  }
+`;
+
+export const List = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+export const Link = styled.li<LinkProps>`
+  font-size: ${({ theme }) => theme.fontSizes.small};
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
+  display: inline;
+  padding: 0 2.5rem 0 0;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.hoverButtonBlue};
+    cursor: pointer;
+  }
+
+  @media (max-width: 1080px) {
+    border-bottom: 2px solid ${({ theme }) => theme.colors.hoverButtonBlue};
+    font-size: 1.1rem;
+    margin: 0 0 1.2rem 0;
+    padding: 0 0 0 0;
   }
 `;

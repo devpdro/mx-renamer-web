@@ -1,24 +1,26 @@
 import styled, { css } from "styled-components";
 
-import { TextRulesProps } from "./text-rules";
+import { RulesProps } from "./rules";
 
 const variants = {
   primary: css`
     color: ${({ theme }) => theme.colors.hoverButtonBlue};
-    font-size: ${({ theme }) => theme.fontSizes.default};
     font-weight: ${({ theme }) => theme.fontWeight.default};
-    border: ${({ theme }) => theme.colors.borderBlack};
-    padding: 0.4rem 0.9rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem 0.3rem 0;
+    @media (max-width: 820px) {
+      font-size: 1.13rem;
+    }
   `,
 };
 
-export const Container = styled.button<TextRulesProps>`
+export const Container = styled.button<RulesProps>`
   ${({ variant, isVisible }) => css`
-    display: ${isVisible ? "block" : "none"};
     font-family: ${({ theme }) => theme.fontFamily.primary};
+    display: ${isVisible ? "block" : "none"};
+    cursor: pointer;
     border: 0;
     transition: background-color 0.2s;
-    cursor: pointer;
 
     -webkit-box-pack: center;
     justify-content: center;
