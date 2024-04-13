@@ -1,18 +1,15 @@
 import { useSelector } from "react-redux";
-import store from "../../../../../../../../store";
+import { initialState } from "../../../../../../../../store/reducers/reducers";
 
 const FileStatistics = () => {
+    const files = useSelector((state: typeof initialState) => state.name);
   // Acessa o estado do Redux
-  const files = useSelector(
-    (state: ReturnType<typeof store.getState>) => state
-  );
-
   // Calcula o total de arquivos
-  const totalFiles = files.name.length;
+  const totalFiles = files.length
 
   // Calcula o tamanho total dos arquivos
-  const totalSize = files.file.reduce(
-    (total: number, fileSize: never) => total + fileSize,
+  const totalSize = files.reduce(
+    (total: any, fileSize: any) => total + fileSize,
     0
   );
 

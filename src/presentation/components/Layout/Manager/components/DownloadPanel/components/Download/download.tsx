@@ -10,13 +10,14 @@ const Download = () => {
       return;
     }
 
-    const fileName = files[0]; // Seleciona o primeiro arquivo da lista
-    const fileURL = fileName; // Usando apenas o nome do arquivo
+    files.forEach((fileName) => {
+      const fileURL = fileName; // Usando apenas o nome do arquivo
 
-    const link = document.createElement("a");
-    link.href = fileURL;
-    link.download = fileName; // Define o nome do arquivo para download
-    link.click();
+      const link = document.createElement("a");
+      link.href = fileURL;
+      link.download = fileName; // Define o nome do arquivo para download
+      link.click();
+    });
   };
 
   return <Button onClick={handleDownload}>Baixar todos os arquivos</Button>;

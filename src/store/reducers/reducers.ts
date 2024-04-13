@@ -12,6 +12,7 @@ export interface FileState {
   file: never[];
   name: string[];
   newName: never[];
+  size: any[];
   install: string[];
 }
 
@@ -27,6 +28,7 @@ export const initialState: FileState = {
   file: [],
   name: [],
   newName: [],
+  size: [],
   install: [],
 };
 
