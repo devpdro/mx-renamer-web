@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
-import * as S from "./button-styles";
+import * as S from "./Button-styles";
 
 export type ButtonVariants =
   | "primary"
