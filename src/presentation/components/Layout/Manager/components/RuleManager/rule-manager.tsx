@@ -2,7 +2,7 @@ import { useState, ReactNode } from "react";
 
 import { FileExtension, Ordering, Wrapper } from "./components";
 
-import * as S from "./rule-manager";
+import * as S from "./rule-manager-styles";
 
 const RuleManager = () => {
   const [content, setContent] = useState<ReactNode | null>(null); // Definindo o tipo inicial como ReactNode ou null

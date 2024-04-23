@@ -16,10 +16,10 @@ export const Container = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3rem;
-  
+
   @media (max-width: 1080px) {
     display: block;
-    padding: 1.5rem 1.5rem;
+    padding: 1.2rem 1.5rem;
   }
 `;
 
@@ -31,18 +31,22 @@ export const TitleBox = styled.div`
 
 export const Logo = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.large};
+
   @media (max-width: 1080px) {
-    margin: 0.7rem 0;
+    margin: 0.9rem 0;
+    padding-left: 0.15rem;
   }
 `;
 
 export const Icon = styled(IoIosMenu)`
   font-size: 2.2rem;
   display: none;
+
   cursor: pointer;
 
   @media (max-width: 1080px) {
     display: block;
+    margin-right: 0.15rem;
   }
   @media (min-width: 1081px) {
     display: none;
@@ -59,8 +63,6 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  list-style: none;
-
   @media (max-width: 1080px) {
     flex-direction: column;
     align-items: flex-start;
@@ -75,14 +77,16 @@ export const Link = styled.li<LinkProps>`
   transition: 0.2s ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.hoverButtonBlue};
     cursor: pointer;
   }
 
   @media (max-width: 1080px) {
     border-bottom: 2px solid ${({ theme }) => theme.colors.hoverButtonBlue};
+    background-color: #3d61ff;
+    border-radius: 10px;
+    color: ${({ theme }) => theme.colors.white};
     font-size: 1.1rem;
     margin: 0 0 1.2rem 0;
-    padding: 0 0 0 0;
+    padding: 0.6rem 1rem 0.6rem 1rem;
   }
 `;

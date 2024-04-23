@@ -25,7 +25,7 @@ export default {
     largeMedium: "1.7rem",
     large: "1.5rem",
     mediumlarge: "1.2rem",
-    medium: "1.2rem",
+    medium: "1.1rem",
     default: "1.1rem",
     small: "1rem",
     tiny: "0.9rem",

@@ -47,9 +47,11 @@ export const Container = styled.header`
   text-align: center;
   max-width: 780px;
   margin: 4.4rem auto 0 auto;
+  padding: 0 2rem;
   @media (min-width: 651px) and (max-width: 1080px) {
     margin: 3.4rem auto 0 auto;
   }
+
   @media (max-width: 650px) {
     align-items: flex-start;
     padding: 0 1.7rem;
@@ -165,7 +167,6 @@ export const TitleBox = styled.div`
     color: ${({ theme }) => theme.colors.mediumGray};
     margin-bottom: 3rem;
     padding: 0 1rem;
-    text-overflow: clip;
     @media (max-width: 650px) {
       font-size: 1.05rem;
       padding: 0 2rem 0 0;

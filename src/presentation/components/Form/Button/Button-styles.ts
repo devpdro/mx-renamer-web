@@ -10,7 +10,7 @@ const variants = {
     font-size: ${({ theme }) => theme.fontSizes.default};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
     padding: 0.6rem 1.4rem;
-
+    margin-left: 0.15rem;
     &:hover {
       background-color: ${({ theme }) => theme.colors.hoverButtonBlue};
       color: ${({ theme }) => theme.colors.white};

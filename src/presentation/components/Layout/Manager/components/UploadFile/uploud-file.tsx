@@ -1,7 +1,7 @@
 import { HandleDrop, FileActions } from "../../../../../../utils";
 import { Button } from "../../../../Form";
 
-import * as S from "./uploud-file";
+import * as S from "./uploud-file-styles";
 
 const UploudFile = () => {
   const { handleButtonFile, handleButtonFolder } = FileActions();

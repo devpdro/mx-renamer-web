@@ -36,7 +36,8 @@ export const TextBox = styled.div`
   padding: 2rem 0rem 2rem 0;
   margin-top: 0.5rem;
   p {
-    font-size: ${({ theme }) => theme.fontSizes.default};
+    font-size: ${({ theme }) => theme.fontSizes.mediumlarge};
+    color: ${({ theme }) => theme.colors.mediumGray};
     @media (max-width: 820px) {
       font-size: 1.05rem;
       text-align: center;

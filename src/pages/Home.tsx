@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
 
-import { Navbar } from "../presentation/components/Common";
-import { Header, Manager } from "../presentation/components/Layout";
+import { Navbar, Footer } from "../presentation/components/Common";
+import { Header, Manager, Faq } from "../presentation/components/Layout";
 
 import theme from "../styles/theme";
 
@@ -11,6 +11,8 @@ const Home = () => {
       <Navbar />
       <Header />
       <Manager />
+      <Faq />
+      <Footer />
     </ThemeProvider>
   );
 };

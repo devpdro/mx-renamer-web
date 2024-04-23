@@ -8,7 +8,7 @@ const Header = () => {
       <S.Version>
         <S.IconCircle />
         <p>
-          <span>v1 :</span> Versão para desktop em desenvolvimento
+          <span>v1 :</span> Versão para desktop em desenvolvimentoa
         </p>
       </S.Version>
       <S.Information>
