@@ -15,10 +15,10 @@ const UploudFile = () => {
         </S.IconBox>
         <S.ButtonBox>
           <Button onClick={handleButtonFile} variant="tertiary">
-            Selecionar arquivo
+            Selecionar arquivo(s)
           </Button>
           <Button onClick={handleButtonFolder} variant="quartinary">
-            Selecionar pasta
+            Selecionar pasta(s)
           </Button>
         </S.ButtonBox>
         <S.TextBox>

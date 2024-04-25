@@ -46,7 +46,7 @@ export const Container = styled.header`
   flex-direction: column;
   text-align: center;
   max-width: 780px;
-  margin: 4.4rem auto 0 auto;
+  margin: 3.4rem auto 0 auto;
   padding: 0 2rem;
   @media (min-width: 651px) and (max-width: 1080px) {
     margin: 3.4rem auto 0 auto;
@@ -66,7 +66,7 @@ export const Version = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem 0.7rem;
+  padding: 0.5rem 0.7rem;
   margin-bottom: 1.7rem;
   border-radius: 5px;
   transition: all 0.3s ease;

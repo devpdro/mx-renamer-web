@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   background-color: ${({ theme }) => theme.colors.hoverButtonBlue};
-  margin-top: 2.8rem;
+  margin-top: 3rem;
   padding: 2rem 2rem 2rem 2rem;
   @media (max-width: 720px) {
     margin-top: 1.3rem

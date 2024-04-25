@@ -8,7 +8,7 @@ const Header = () => {
       <S.Version>
         <S.IconCircle />
         <p>
-          <span>v1 :</span> Versão para desktop em desenvolvimentoa
+        Aproveite ao máximo nossa ferramenta de renomeação!
         </p>
       </S.Version>
       <S.Information>
@@ -37,7 +37,7 @@ const Header = () => {
       </S.TitleBox>
       <S.ButtonBox>
         <Button>Usar agora</Button>
-        <Button variant="secondary">Documentação</Button>
+        <Button variant="secondary">Perguntas frequentes</Button>
       </S.ButtonBox>
     </S.Container>
   );

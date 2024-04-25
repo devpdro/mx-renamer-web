@@ -6,7 +6,7 @@ export const Container = styled.section`
   padding: 2rem;
   h1 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 2.4rem;
     span {
@@ -28,19 +28,21 @@ export const FaqItem = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin-bottom: 0.4rem;
     h5 {
       font-weight: 500;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       @media (max-width: 820px) {
         font-size: 1.2rem;
       }
     }
     p {
       color: ${({ theme }) => theme.colors.mediumGray};
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       line-height: 1.8rem;
+      @media (max-width: 820px) {
+        font-size: 1.1rem;
+      }
     }
   }
 `;
